@@ -4,6 +4,7 @@ title: "MainSqueeze: The 52 parameter model that drives in the Udacity simulator
 description: ""
 category: Deep Learning
 tags: [Deep Learning, SqueezeNet, Udacity, Behavioral Cloning]
+comments: true
 ---
 
 ## Introduction
