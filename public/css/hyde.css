@@ -1,0 +1,558 @@
+/*
+ __                  __
+/\ \                /\ \
+\ \ \___   __  __   \_\ \     __
+ \ \  _ `\/\ \/\ \  /'_` \  /'__`\
+  \ \ \ \ \ \ \_\ \/\ \_\ \/\  __/
+   \ \_\ \_\/`____ \ \___,_\ \____\
+    \/_/\/_/`/___/> \/__,_ /\/____/
+               /\___/
+               \/__/
+
+Hyde is an elegant, open source, mobile first theme for Jekyll.  It includes
+lightweight styles and placeholder content to get you up and running with a
+simple blog in no time.
+
+Designed, built, and released under MIT license by @mdo.
+
+Learn more at http://andhyde.com or https://github.com/mdo/hyde.
+
+*/
+
+
+
+/* Body resets
+-------------------------------------------------- */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #454441;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 32px;
+}
+h1.title, h2.title {
+  font-size: 32px;
+  font-weight:500;
+}
+h2 {
+  margin-top: 20px;
+  font-size: 32px;
+}
+h3 {
+  margin-top: 24px;
+  font-size: 24px;
+}
+h4, h5, h6 {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+ul, ol {
+  padding: 0 0 0 20px;
+  margin: 0 0 15px;
+}
+li {
+  margin-bottom:5px;
+}
+
+hr {
+  position: relative;
+  margin: 40px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #fff;
+}
+
+strong {
+  color: #222;
+}
+
+abbr {
+  background-color: #eee;
+  display: inline-block;
+  padding: 3px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+code, pre {
+  padding: 0 3px 2px;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: 14px;
+  border-radius: 3px;
+}
+code {
+  padding: 2px 4px;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+
+pre {
+  display: block;
+  margin: 0 0 14px;
+  padding: 15px 20px;
+  line-height: 24px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #eee;
+}
+pre code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+.highlight {
+  margin-bottom: 15px;
+  padding: 15px 0;
+  border-radius: 5px;
+}
+.highlight pre {
+  margin-bottom: 0;
+}
+
+/* Quotes */
+blockquote {
+  padding: 0 0 0 20px;
+  margin: 15px 30px 15px 0;
+  border-left: 5px solid #eee;
+}
+blockquote p {
+  margin-bottom: 0;
+  color: #7a7a7a;
+  text-indent: -0.4em;
+}
+blockquote p:before {
+  content: '\201C';
+}
+blockquote p:after {
+  content: '\201D';
+}
+
+img {
+  display: block;
+  margin: 0 0 15px;
+  border-radius: 5px;
+}
+
+/* Links
+-------------------------------------------------- */
+
+a {
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;
+}
+h1 a, h2 a {
+  font-weight:500;
+  color: inherit;
+}
+a:hover {
+  border-bottom: dashed 1px #222;
+}
+
+
+/* Scaffolding
+-------------------------------------------------- */
+
+/* Header */
+.masthead {
+  color: #fff;
+  background-color: #2a2a2a;
+}
+.masthead-inner {
+  padding: 20px 20px 5px;
+}
+.masthead h1 {
+  margin-top: 0;
+  font-family: "Abril Fatface";
+}
+.masthead .lead {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.masthead a {
+  color: #fff;
+}
+
+.mobile-toggle {
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.mobile-toggle span.icon-bar {
+  background-color: #fff;
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin-bottom:4px;
+  border-radius: 1px;
+  box-sizing: border-box;
+}
+
+.toggle-content {
+  display:none;
+}
+.toggle-content.open {
+  display:block;
+}
+.page-title {
+  /* padding-bottom:6px; */
+  /* border-bottom: dashed 1px #999; */
+}
+
+
+
+/* Footer area of masthead */
+.colophon {
+  margin-top: 10px;
+  color: #7a7a7a;
+}
+.colophon-links {
+  margin: 0 0 15px;
+  list-style: none;
+}
+
+.colophon-links li a {
+  text-transform: lowercase;
+}
+
+
+/* Posts
+-------------------------------------------------- */
+
+/* Wrapper for all posts on homepage */
+.container {
+  padding-left:  20px;
+  padding-right: 20px;
+}
+
+/* Single post */
+.post {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.post-date {
+  display: block;
+  margin: -10px 0 10px;
+  color: #9a9a9a;
+}
+.post p a, .post li a {
+  border-bottom: dashed 1px #222;
+}
+
+.read-more {
+  border-bottom: dashed 1px #222;
+}
+
+.post img {
+  max-width:100%;
+}
+
+
+/* Pagination
+-------------------------------------------------- */
+
+.pagination {
+  overflow: hidden; /* clearfix */
+  margin-top: 40px;
+  font-weight: bold;
+  color: #ccc;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+.pagination a,
+.pagination span {
+  float: left;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+}
+.pagination a:first-child,
+.pagination span:first-child {
+  border-right: 1px solid #eee;
+}
+.pagination a:hover {
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+/* Other Pages
+-------------------------------------------------- */
+.page {
+  padding: 20px 0;
+}
+
+/* Portfolio
+-------------------------------------------------- */
+.portfolio .page-title {
+  display: inline-block;
+  margin-bottom:20px;
+}
+.project-categories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float:right;
+}
+.project-categories li {
+  float:left;
+  margin-right: 15px;
+  font-size: 90%;
+}
+.project-categories a {
+  color: #777;
+  font-style: italic;
+}
+.project-categories a:hover {
+  border-bottom: dashed 1px #777;
+}
+.project-category-title {
+  font-size:150%;
+  margin:0;
+  padding: 0 0 6px 0;
+  color: #777;
+  border-bottom: dashed 1px #777;
+  font-style: italic;
+}
+.projects {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.projects .project {
+  padding: 0;
+  margin: 0 0 30px 0;
+  width: 100%;
+}
+.project-title {
+  font-size: 110%;
+}
+.project-image {
+  width: 30%;
+  border: solid 1px #ccc;
+  display: inline-block;
+  float:left;
+  margin-right:15px;
+}
+.project-description {
+  width: 60%;
+  font-size: 80%;
+  color: #333;
+  display: inline-block;
+  float:left;
+}
+
+/* BrowseHappy
+-------------------------------------------------- */
+.browsehappy {
+  z-index:100000;
+  background: #eee;
+  border: solid 1px #999;
+  position:fixed;
+  top:0;
+  left:0;
+  padding: 10px 0;
+  text-align: center;
+  display:block;
+  width:100%;
+  font-size: 20px;
+}
+.browsehappy a {
+  text-decoration: underline;
+  color: #3F7AB9;
+}
+
+/* Clearfix
+-------------------------------------------------- */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+
+/* Responsive
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+  .project-categories {
+    float:none;
+    margin-bottom:20px;
+    font-size: 90%;
+    display: block;
+  }
+  .project-categories li {
+    float: none;
+  }
+  .project-image {
+    width: auto;
+    max-width: 100%;
+    display: block;
+    float:none;
+    margin-right:0;
+  }
+  .project-description {
+    width: 100%;
+    display: block;
+    float:none;
+  }
+}
+@media (min-width: 768px) {
+  .mobile-toggle {
+    top: 25px;
+  }
+  .masthead h1 {
+    font-size: 54px;
+  }
+  .masthead .lead {
+    font-size:20px;
+  }
+  h1, h1.title, h2.title {
+    font-size: 36px;
+  }
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 990px) {
+  .mobile-toggle {
+    display: none;
+  }
+  .toggle-content {
+    display:block;
+  }
+  body {
+    font-size: 18px;
+  }
+  h1, h1.title, h2.title {
+    font-size: 40px;
+  }
+  .masthead h1 {
+    font-size: 54px;
+  }
+
+  /* Center container in available real estate */
+  .container {
+    margin-left: 35%;
+    margin-right: 10%;
+    width: 55%;
+  }
+
+  /* Fix the masthead to the side for impact and awesomeness */
+  .masthead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    margin-bottom: 0;
+  }
+  .masthead-inner {
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .masthead .lead {
+    font-size: 20px;
+    line-height:1.35;
+  }
+  .colophon {
+    margin-top: 40px;
+  }
+
+  /* Remove mobile device padding from list of posts */
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Increase space between posts */
+  .post {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  /* Make pagination stand alone */
+  .pagination {
+    margin-bottom: 60px;
+    border: 1px solid #eee;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .masthead h1 {
+    font-size: 64px;
+  }
+  .masthead-inner {
+    padding: 40px;
+  }
+  .masthead .lead {
+    font-size: 24px;
+    line-height:1.5;
+  }
+}
+

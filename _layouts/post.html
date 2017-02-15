@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+
+<div class="post">
+  <h1 class='title'>{{ page.title }}</h1>
+  {% if page.date && page.date.length > 0 %}
+    <span class="post-date">{{ page.date | date_to_string }}</span>
+  {% endif %}
+  {{ content }}
+</div>
+
+<hr/>
+<div class="related">
+  <h3>Related Posts</h3>
+  <ul class="posts">
+    {% for post in site.related_posts limit:3 %}
+      <h4><a href="{{ post.url }}">
+        {{ post.title }}
+        <small>{{ post.date | date_to_string }}</small>
+      </a></h4>
+    {% endfor %}
+  </ul>
+</div>
