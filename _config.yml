@@ -9,3 +9,5 @@ twitter_username: mez_gebre
 github_username:  mez
 disqus_shortname: 'mez-github-io'
 permalink: /:year/:month/:day/:title/
+
+date_format: '%B %d, %Y'
