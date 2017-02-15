@@ -30,6 +30,7 @@ Learn more at http://andhyde.com or https://github.com/mdo/hyde.
           box-sizing: border-box;
 }
 
+
 html,
 body {
   margin: 0;
@@ -418,15 +419,15 @@ a:hover {
     line-height: 0;
     height: 0;
 }
- 
+
 .clearfix {
     display: inline-block;
 }
- 
+
 html[xmlns] .clearfix {
     display: block;
 }
- 
+
 * html .clearfix {
     height: 1%;
 }
@@ -435,6 +436,7 @@ html[xmlns] .clearfix {
 -------------------------------------------------- */
 
 @media (max-width: 768px) {
+
 
   .project-categories {
     float:none;
@@ -459,6 +461,7 @@ html[xmlns] .clearfix {
   }
 }
 @media (min-width: 768px) {
+
   .mobile-toggle {
     top: 25px;
   }
@@ -477,6 +480,7 @@ html[xmlns] .clearfix {
   }
 }
 @media (min-width: 990px) {
+
   .mobile-toggle {
     display: none;
   }
@@ -544,6 +548,7 @@ html[xmlns] .clearfix {
 }
 
 @media (min-width: 1200px) {
+
   .masthead h1 {
     font-size: 64px;
   }
@@ -555,4 +560,3 @@ html[xmlns] .clearfix {
     line-height:1.5;
   }
 }
-
