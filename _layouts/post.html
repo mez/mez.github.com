@@ -2,19 +2,20 @@
 layout: default
 ---
 
-
 <div class="post">
   <h1 class='title'>{{ page.title }}</h1>
   {% if page.date && page.date.length > 0 %}
-    <span class="post-date">{{ page.date | date: site.date_format }}</span>
-  {% endif %}
-  {% if site.disqus_shortname %}
-      &middot;
-      <a href="{{ site.url }}{{ page.url }}index.html#disqus_thread" data-disqus-identifier="{{ page.url }}"></a>
-      {% if page.update_date %}
+    <span class="post-date">
+      {{ page.date | date: site.date_format }}
+      {% if site.disqus_shortname %}
           &middot;
-          Updated {{ page.update_date | date: site.date_format }}
+          <a href="https://mez.github.io{{ page.url }}#disqus_thread"></a>
+          {% if page.update_date %}
+              &middot;
+              Updated {{ page.update_date | date: site.date_format }}
+          {% endif %}
       {% endif %}
+    </span>
   {% endif %}
   {{ content }}
 </div>
@@ -26,46 +27,10 @@ layout: default
     {% for post in site.related_posts limit:3 %}
       <h4><a href="{{ post.url }}">
         {{ post.title }}
-        <small>{{ post.date | date_to_string }}</small>
+        <small>{{ post.date | site.date_format }}</small>
       </a></h4>
     {% endfor %}
   </ul>
 </div>
 
-{% if page.comments %}
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-var disqus_config = function () {
-this.page.url =  "{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "{{ post.title }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = '//mez-github-io.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-<!-- Add Disqus comment count (not the comments) -->
-<script type="text/javascript">
-  /* * * CONFIGURATION VARIABLES * * */
-  var disqus_shortname  = '{{ site.disqus_shortname }}';
-  // var disqus_developer = 1; // Comment out when the site is live
-  /* * * DON'T EDIT BELOW THIS LINE * * */
-  (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = '//mez-github-io.disqus.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-  }());
-</script>
-
-{% endif %}
+{% include disqus.html %}

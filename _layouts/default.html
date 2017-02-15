@@ -81,7 +81,21 @@
       ga('create', 'UA-91996906-1', 'auto');
       ga('send', 'pageview');
     </script>
-    
+
+    <!-- Add Disqus comment count (not the comments) -->
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname  = '{{ site.disqus_shortname }}';
+      var disqus_developer = 1; // Comment out when the site is live
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = '//mez-github-io.disqus.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+
     <script type='text/javascript' src='/public/js/zepto.min.js'></script>
     <script type='text/javascript' src='/public/js/app.js'></script>
   </body>
