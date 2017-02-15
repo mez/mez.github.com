@@ -2,7 +2,7 @@ title:        Mez Gebre
 email:        mez@jetcode.io
 markdown:     kramdown
 permalink:    pretty
-highlighter:  pygments
+highlighter:  rouge
 paginate:     5
 excerpt_separator: <!-- more -->
 twitter_username: mez_gebre
