@@ -13,7 +13,7 @@ layout: default
       {{ post.date | date: site.date_format }}
       {% if site.disqus_shortname %}
         &middot;
-        <a href="https://mez.github.io{{ post.url }}#disqus_thread"></a>
+        <a href="https://mez.github.io{{ post.url }}#disqus_thread">0 Comments</a>
         {% if post.update_date %}
           &middot;
           Updated {{ post.update_date | date: site.date_format }}
