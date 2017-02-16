@@ -5,6 +5,7 @@ description: ""
 category: Deep Learning
 tags: [Deep Learning, SqueezeNet, Udacity, Behavioral Cloning]
 comments: true
+update_date: 2017-02-16
 ---
 
 ## Introduction
@@ -173,7 +174,7 @@ I used Keras to do a validation split on 30% of the data and my custom early ter
 </div>
 **Note: this loss plot is from a previous run without early termination**
 
-This model was tiny (52 params!) and with only ~20k images I was able to train it on a 2012 Macbook air. An epoch was about six seconds. The memory requirement were small so I removed my generator and just loaded the entire dataset!
+This model was tiny (52 params!) and with only ~20k images I was able to train it on a 2012 Macbook air. An epoch was about six seconds. The memory requirement were small, so I just loaded the entire dataset!
 
 <div align="left">
   <br>
@@ -184,7 +185,7 @@ This model was tiny (52 params!) and with only ~20k images I was able to train i
 </div>
 
 ## Pros
-1. Can training on my Macbook air.
+1. Can train without a GPU.
 2. Enough to pass the challenge.
 3. Smaller model meant I could experiment with more variables and different models to gain better intuition.
 4. Learned that our current method of training with back prop is not efficient and that we can achieve a lot with a smaller network.
