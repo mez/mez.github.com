@@ -28,6 +28,7 @@ Object detection has been making great advancement in recent years. The [*hello 
 Speed becomes a major concern when we are thinking of running these models on the edge (IoT, mobile, cars). For example, a car needs to detect where other cars, people and bikes are to name a few; I could go on... puppies, kittens... you get the idea. The major motivation for me is the need for speed given the constraints that edge computes have; we need compact models that can make quick predictions and are energy efficient.
 
 <!-- more -->
+
 ---
 
 ## The SqueezeDet Model
@@ -71,7 +72,7 @@ The figure above is the four part loss function that makes this entire model pos
 1. Yellow: Regression of the scalars for the anchors
 2. Green: The confidence score regression which uses [IOU](http://www.pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/){:target='_blank'} of ground and predicted bounding boxes.
 3. Blue: Penalize anchors that are not responsible for detection by dropping their confidence score.
-4. pink: simply cross entropy
+4. Pink: Simply cross entropy.
 
 
 ## Using SqueezeDet
