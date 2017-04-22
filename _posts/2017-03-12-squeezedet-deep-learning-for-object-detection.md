@@ -26,7 +26,7 @@ Object detection has been making great advancement in recent years. The [*hello 
 1. Easy to implement, relatively speaking...
 
 Speed becomes a major concern when we are thinking of running these models on the edge (IoT, mobile, cars). For example, a car needs to detect where other cars, people, puppies, kittens and bikes are to name a few; I could go on, but you get the idea. This is why I bother. The major motivation for me is the edge compute and the need for speed. We need compact models that can make quick predictions and are energy efficient.
-
+<!-- more -->
 ---
 
 ## The SqueezeDet Model
