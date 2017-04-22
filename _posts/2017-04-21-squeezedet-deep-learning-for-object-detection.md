@@ -72,7 +72,7 @@ The figure above is the four part loss function that makes this entire model pos
 1. Yellow: Regression of the scalars for the anchors
 2. Green: The confidence score regression which uses [IOU](http://www.pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/){:target='_blank'} of ground and predicted bounding boxes.
 3. Blue: Penalize anchors that are not responsible for detection by dropping their confidence score.
-4. Pink: Simply cross entropy.
+4. Pink: The cross entropy.
 
 
 ## Using SqueezeDet
