@@ -50,7 +50,7 @@ Inspired by YOLO, SqueezeDet is a single stage detection pipeline that does regi
 
 * Four scalars (x, y, w, h)
 * A confidence score ( Pr(Object)xIOU )
-* `C` conditional class
+* `C` conditional classes
 
 
 Hence SqueezeDet has a fixed output of `WxHxK(4+1+C)`.
