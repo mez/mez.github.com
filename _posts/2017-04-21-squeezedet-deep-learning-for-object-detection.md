@@ -78,7 +78,7 @@ The figure above is the four part loss function that makes this entire model pos
 ## Using SqueezeDet
 
 The authors of the paper did implement the model via TensorFlow!
-Go check it out on github [https://github.com/BichenWuUCB/squeezeDet](https://github.com/BichenWuUCB/squeezeDet)
+Go check it out on github [https://github.com/BichenWuUCB/squeezeDet](https://github.com/BichenWuUCB/squeezeDet){:target='_blank'}
 
 ### Thresholding SqueezeDet
 
