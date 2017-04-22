@@ -87,6 +87,7 @@ You have to tweak how confident or doubtful you want the model to be; the predic
 Here is an example of a recent project I did where I tweak the params:
 
 Like the paper:
+
 ```
 N = 64
 ```
