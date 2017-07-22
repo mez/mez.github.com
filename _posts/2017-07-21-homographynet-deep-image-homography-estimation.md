@@ -116,7 +116,7 @@ Creating the dataset was pretty straightforward, so I'll only highlight some of 
 
 1. Randomly crop a `128x128` patch at position `p` from the grayscale image `I` and call it patch `A`. _Staying away from the edges!_
 2. Randomly perturb the four corners of patch `A` within the range `[-rho, rho]` and let's call this new position `p'`. _The paper used `rho=32`_
-3. Compute the homorgraphy of patch `A` using position `p` and `p'` and we'll call this `H`<sup>`AB`</sup>
+3. Compute the homography of patch `A` using position `p` and `p'` and we'll call this `H`<sup>`AB`</sup>
 4. Take the inverse of the homography (`H`<sup>`AB`</sup>)<sup>`-1`</sup> which equals `H`<sup>`BA`</sup> and apply that to image `I`, calling this new image `I'`. Crop a `128x128` patch at position `p` from image **_`I'`_** and call it patch `B`. 
 5. Finally, take patch `A` and `B` and stack them channel-wise. This will give you a `128x128x2` image that you'll use as input to the models! The label would be the 4-point parameterization of `H`<sup>`AB`</sup>.
 
