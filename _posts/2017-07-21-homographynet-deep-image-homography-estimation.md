@@ -31,7 +31,7 @@ I don't have a clever analogy here, but I'll give you a simple example to tie it
 There you go, the question you just asked is what a Homography tries to answer. Homography is an isomorphism of perspectives. A 2D homography between `A` and `B` would give you the projection transformation between the two images! It is a 3x3 matrix that descibes the affine transformation. Entire books are written on these concepts, but hopefully we now have the general idea to continue.
 
 ### _NOTE_
-There are some constraints about a homography I have not mention such as:
+There are some constraints about a homography I have not mentioned such as:
 
 1. Usually both images are taken from the same camera.
 2. Both images should be viewing the same plane. 
