@@ -105,7 +105,7 @@ then it is possible to reconstruct the 3x3 homography matrix that was used! You 
 
 ### Training Data Generation
 
-Now that we have a way to represent the homography such that we can use well known lost functions, we can start talking about how the training data is generated. 
+Now that we have a way to represent the homography such that we can use well known loss functions, we can start talking about how the training data is generated. 
 <p align="center">
     <img src='/public/img/hn/datagen.png' alt='Training Data Generation' />
 </p>
