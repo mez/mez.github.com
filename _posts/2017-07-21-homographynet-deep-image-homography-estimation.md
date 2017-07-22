@@ -26,12 +26,12 @@ If you decide to bake a cake; the process of taking the ingredients and followin
 ### Projective geometry?
 I don't have a clever analogy here, but I'll give you a simple example to tie it all together. Imagine you're driving and your dash cam snapped a picture of the road in front of you (let's call this pic `A`); at the same time, imagine there was a drone right above you and it also took a picture of the road in front of you (let's call this pic `B`). You can see that pic `A` and `B` are related, but how? They're both pictures of the road in front you, only difference is the perspective! The big question....
 
->Is there a recipe/isomorphism that can take you from `A` to `B` and vis versa?
+**_Is there a recipe/isomorphism that can take you from `A` to `B` and vice versa?_**
 
 There you go, the question you just asked is what a Homography tries to answer. Homography is an isomorphism of perspectives. A 2D homography between `A` and `B` would give you the projection transformation between the two images! It is a 3x3 matrix that descibes the affine transformation. Entire books are written on these concepts, but hopefully we now have the general idea to continue.
 
 ### _NOTE_
-There are some constraints about a homography I have not mention such as...
+There are some constraints about a homography I have not mention such as:
 
 1. Usually both images are taken from the same camera.
 2. Both images should be viewing the same plane. 
@@ -62,7 +62,7 @@ Due to the nature of this problem, these pipelines are only producing estimates.
 
 It is a very hard problem that is error-prone and requires heavy compute to get any sort of robustness. Here we are, finally ready to talk about the question this paper wants to answer.
 
->Is there a single robust algorithm that, given a pair of images, simply returns the homography relating the pair?
+**_Is there a single robust algorithm that, given a pair of images, simply returns the homography relating the pair?_**
 
 [//]: # (Image References)
 [image1]: /public/img/hn/homographynet.png
