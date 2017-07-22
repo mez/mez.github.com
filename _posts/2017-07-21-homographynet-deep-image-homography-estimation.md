@@ -90,7 +90,7 @@ The architecture seems simple enough, but how is the model trained? Where is the
 As the paper states and I agree, the simplist way to parameterize a homography is with a 3x3 matrix and a fixed scale. In the 3x3 homography matrix, [H11:H21, H12:H22] are responsible for the rotation and [H13:H23] handle the translational offset. This way you can map each pixel at position `[u,v,1]` from the image against the homograpy like the figure below, to get the new projected transformation `[u',v',1]`.  
 ![alt HomographyNet 3x3 matrix][image5]
 
-However! If you try to unroll the 3x3 matrix and use it as the label (ground truth), you'd end up mixing the rotational and translational components. Creating a loss function that balances the mixed components would have been another hurdle the paper would of had to overcome. Hence, it was better to use well known loss functions (L2 and Cross-Entropy) and instead figure out a way to _re-parameterize_ the homography matrix!
+However! If you try to unroll the 3x3 matrix and use it as the label (ground truth), you'd end up mixing the rotational and translational components. Creating a loss function that balances the mixed components would have been an unnecessary hurdle. Hence, it was better to use well known loss functions (L2 and Cross-Entropy) and instead figure out a way to _re-parameterize_ the homography matrix!
 
 ### The 4-Point Homography Parameterization
 
