@@ -4,6 +4,7 @@ title: "HomographyNet: Deep Image Homography Estimation"
 description: "A deep convolutional neural network for estimating the relative homography between a pair of images."
 category: 
 comments: true
+update_date: 2017-02-22
 tags: [Deep Learning, Homography, Computer Vision]
 ---
 
@@ -121,10 +122,18 @@ Creating the dataset was pretty straightforward, so I'll only highlight some of 
 
 They cleverly used this five step process on random images from the _MS-COCO_ dataset to create 500,000 training examples. Pretty damn cool (excuse my english).
 
+
+## The Code
+
+If you'd like to see the regression network coded up in Keras _and_ the data generation process visualized, you're in luck! Follow the links below to my Github repo.
+
+* [HomographyNet Regression variant](https://github.com/mez/deep_homography_estimation/blob/master/HomograpyNET.ipynb)
+* [Dataset Generation Visualization](https://github.com/mez/deep_homography_estimation/blob/master/Dataset_Generation_Visualization.ipynb) 
+
 ## Final thoughts
 
 That pretty much highlights the major parts of the paper. I am hoping you now have an idea of what the paper was about and learned something new! Go read the paper because I didn't talk about the results etc.
 
 I'd like to think easy future improvements could be to swap out the heavy VGG network for squeezenet! Giving you the improvement of a smaller network. I'll maybe experiment with this idea and see if I can match or improve on their results. As for possible uses today, I could see this network being used as a cascade classifier. The traditional methods are very compute heavy, so if we could maybe have this network in front to filter out the easy wins, we could cut down on compute cost. 
 
-Stay tuned for the next paper and please comment with any corrects or thoughts. That is all folks! 
+Stay tuned for the next paper and please comment with any corrections or thoughts. That is all folks! 
