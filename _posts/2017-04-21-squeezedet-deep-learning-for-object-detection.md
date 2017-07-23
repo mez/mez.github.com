@@ -5,7 +5,7 @@ description: "SqueezeDet is a single stage detection pipeline that does region p
 category:
 comments: true
 thumbnail: "/sd/squeezedet.png"
-tags: [Deep Learning, SqueezeNet, Computer Vision]
+tags: [Deep Learning, SqueezeDet, SqueezeNet, Computer Vision]
 ---
 
 ### _Why bother writing this post?_
