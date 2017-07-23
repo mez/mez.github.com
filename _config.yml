@@ -9,4 +9,5 @@ twitter_username: mez_gebre
 github_username:  mez
 disqus_shortname: 'mez-github-io'
 url: https://mez.github.io
+image_base: /public/img
 date_format: '%B %d, %Y'

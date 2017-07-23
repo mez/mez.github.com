@@ -5,7 +5,8 @@ description: "A deep convolutional neural network for estimating the relative ho
 category: 
 comments: true
 update_date: 2017-02-22
-tags: [Deep Learning, Homography, Computer Vision]
+thumbnail: "/hn/homographynet.png"
+tags: [Deep Learning, HomographyNet, Computer Vision]
 ---
 
 ## Introduction

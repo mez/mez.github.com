@@ -6,6 +6,7 @@ category: Deep Learning
 tags: [Deep Learning, SqueezeNet, Udacity, Behavioral Cloning]
 comments: true
 update_date: 2017-02-16
+thumbnail: "/bc/sim_image.png"
 ---
 
 ## Introduction

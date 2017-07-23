@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "SqueezeDet: Deep Learning for Object Detection"
-description: ""
+description: "SqueezeDet is a single stage detection pipeline that does region proposal and classification by one single network."
 category:
 comments: true
-tags: [Deep Learning, SqueezeNet]
+thumbnail: "/sd/squeezedet.png"
+tags: [Deep Learning, SqueezeNet, Computer Vision]
 ---
 
 ### _Why bother writing this post?_
