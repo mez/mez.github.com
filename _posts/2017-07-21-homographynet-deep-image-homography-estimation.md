@@ -4,7 +4,7 @@ title: "HomographyNet: Deep Image Homography Estimation"
 description: "A deep convolutional neural network for estimating the relative homography between a pair of images."
 category: 
 comments: true
-update_date: 2017-02-22
+#update_date: 2017-07-22
 thumbnail: "/hn/homographynet.png"
 tags: [Deep Learning, HomographyNet, Computer Vision]
 ---

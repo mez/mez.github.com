@@ -11,3 +11,4 @@ disqus_shortname: 'mez-github-io'
 url: https://mez.github.io
 image_base: /public/img
 date_format: '%B %d, %Y'
+plugins: [jekyll-paginate]
