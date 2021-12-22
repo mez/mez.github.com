@@ -6,21 +6,20 @@ layout: null
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Mez Gebre</title>
- <link href="http://mez.github.com/atom.xml" rel="self"/>
- <link href="http://mez.github.com/"/>
+ <link href="http://mez.sh/atom.xml" rel="self"/>
+ <link href="http://mez.sh/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://mez.github.com/</id>
+ <id>http://mez.sh/</id>
  <author>
    <name>Mez Gebre</name>
-   <email>mez@jetcode.io</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://mez.github.com{{ post.url }}"/>
+   <link href="http://mez.sh{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://mez.github.com{{ post.id }}</id>
+   <id>http://mez.sh{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
