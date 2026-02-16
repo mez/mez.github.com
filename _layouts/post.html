@@ -7,13 +7,9 @@ layout: default
   {% if page.date and page.date.length > 0 %}
     <span class="post-date">
       {{ page.date | date: site.date_format }}
-      {% if site.disqus_shortname %}
+      {% if page.update_date %}
           &middot;
-          <a href="https://mez.github.io{{ page.url }}#disqus_thread">0 Comments</a>
-          {% if page.update_date %}
-              &middot;
-              Updated {{ page.update_date | date: site.date_format }}
-          {% endif %}
+          Updated {{ page.update_date | date: site.date_format }}
       {% endif %}
     </span>
   {% endif %}
@@ -33,5 +29,3 @@ layout: default
     {% endfor %}
   </ul>
 </div>
-
-{% include disqus.html %}

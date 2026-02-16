@@ -38,10 +38,10 @@ body {
 }
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
-  color: #454441;
+  line-height: 1.6;
+  color: #333;
   background-color: #fff;
 }
 
@@ -200,7 +200,9 @@ a:hover {
 }
 .masthead h1 {
   margin-top: 0;
-  font-family: "Abril Fatface";
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 .masthead .lead {
   font-size: 18px;

@@ -3,32 +3,105 @@ layout: default
 title: About
 ---
 
-<div class="page">
+<style>
+.about-page {
+  max-width: 700px;
+}
+.about-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+.about-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.about-tagline {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.about-section {
+  margin-bottom: 2rem;
+}
+.about-section h2 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #2a2a2a;
+  display: inline-block;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.skill-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.2rem;
+  border-left: 3px solid #2a2a2a;
+}
+.skill-card h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+.skill-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+.cta-box {
+  background: linear-gradient(135deg, #2a2a2a 0%, #444 100%);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 2rem;
+}
+.cta-box h3 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.cta-box p {
+  margin: 0;
+  opacity: 0.9;
+}
+</style>
 
-  <h1 class="page-title">About</h1>
-  <p>
-    Hi there! Welcome to my blog. My name is Mez Gebre and I am lucky enough
-    to be an entrepreneur and a software engineer. Since 2016, I've been deep in the autonomous vehicle
-    space and have been working on general perception & state estimation/localization for robotics. 
-    Occasionally, I do consulting work and enjoy solving challenging business problems. 
-  </p>
+<div class="about-page">
+  <div class="about-header">
+    <h1>Hey, I'm Mez</h1>
+    <p class="about-tagline">Engineer. Builder. Perpetually curious.</p>
+  </div>
 
-  <p> My problem solving toolbelt includes:
-    <ol>
-      <li>MVP to Full Scale deployment know-how (need someone that can deploy your ML model to your edge compute fleet?).</li>
-      <li>Data Inspection and analysis (I am suprised how by how much people underestimate this step.).</li>
-      <li>Machine Learning, especially Deep Learning to produce models that can perform their tasks according to properly documented ODD.</li>
-      <li>ASPICE guided systems/software engineering. </li>
-    </ol>
+  <div class="about-section">
+    <p>
+      I'm an engineer and entrepreneur based in the <strong>Bay Area</strong>. 
+      I love working on hard, interesting problems across multiple domains—it lets me 
+      connect dots that might otherwise go unnoticed and pull ideas from unexpected places.
+    </p>
+    <p>
+      Since 2016, I've been deep in the autonomous systems space, working on perception, 
+      state estimation, and localization for robotics. These days, I'm focused on the 
+      intersection of <strong>robotics</strong> and <strong>generative AI</strong>—building 
+      agent-based SaaS systems and exploring how AI can better interact with the physical world. 
+      I love taking ideas from concept to deployment.
+    </p>
+    <p>
+      I'm constantly learning, always trying to understand more and be better understood. 
+      This blog is my scratchpad for projects and ideas I find interesting.
+    </p>
+  </div>
 
-
-  </p>
-  <p>
-    If you're in Palo Alto, shoot me a message; I'd be happy to grab coffee.
-    <h3 align="center"><i>Let me know if I can help you with anything.</i></h3>
-  </p>
-  <p>
-  I love to learn. Constantly trying to understand more and also be better understood.
-  This blog will be my scratchpad and I'll blog about projects I find interesting.</p>
-  <p>Find me on all the social sites and feel free to connect.</p>
- </div>
+  <div class="cta-box">
+    <h3>Let's connect</h3>
+    <p>Got an interesting problem you're working on? I'm always up for a good challenge. Find me on the socials.</p>
+  </div>
+</div>
