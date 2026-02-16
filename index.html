@@ -3,42 +3,38 @@ layout: default
 ---
 
 <div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
+  {% assign all_posts = site.posts %}
+  
+  {% comment %} Featured: Latest Post {% endcomment %}
+  {% assign latest = all_posts.first %}
+  <div class="post featured">
     <h2 class='title'>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ latest.url }}">{{ latest.title }}</a>
     </h2>
-
     <span class="post-date">
-      {{ post.date | date: site.date_format }}
-      {% if post.update_date %}
+      {{ latest.date | date: site.date_format }}
+      {% if latest.tags.size > 0 %}
         &middot;
-        Updated {{ post.update_date | date: site.date_format }}
+        {% for tag in latest.tags limit:3 %}
+          <span class="tag">{{ tag }}</span>{% unless forloop.last %} {% endunless %}
+        {% endfor %}
       {% endif %}
     </span>
-
-
-    {{ post.excerpt }}
-
-    <a href="{{ post.url }}" class='read-more'>Read More</a>
+    {{ latest.excerpt }}
   </div>
-  {% endfor %}
-</div>
 
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a href="/page{{paginator.next_page}}" class="older">Older</a>
-  {% else %}
-    <span class="next">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a href="/" class="newer">Newer</a>
-    {% else %}
-      <a href="/page{{paginator.previous_page}}" class="newer">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="previous">Newer</span>
+  {% comment %} Archive: All Other Posts {% endcomment %}
+  {% if all_posts.size > 1 %}
+  <div class="archive">
+    <h3>All Posts</h3>
+    <ul class="post-list">
+      {% for post in all_posts offset:1 %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
   {% endif %}
 </div>

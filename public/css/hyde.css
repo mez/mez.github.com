@@ -278,6 +278,16 @@ a:hover {
 }
 
 /* Single post */
+.back-link {
+  display: inline-block;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.back-link:hover {
+  color: #222;
+}
 .post {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -297,6 +307,52 @@ a:hover {
 
 .post img {
   max-width:100%;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #666;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+/* Archive List */
+.archive {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+.archive h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #666;
+}
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.post-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+.post-list li:last-child {
+  border-bottom: none;
+}
+.post-list .post-date {
+  display: inline;
+  margin: 0;
+  min-width: 70px;
+  font-size: 14px;
+}
+.post-list a {
+  font-weight: 500;
 }
 
 
