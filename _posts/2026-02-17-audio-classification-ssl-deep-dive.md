@@ -156,7 +156,7 @@ param_groups = [
 
 The frozen approach gets you 94.5% with minimal compute—the AudioSet pretraining is *that* good. Fine-tuning squeezes out another 0.75%, which matters if you're chasing leaderboards but honestly? Frozen is probably fine for most use cases.
 
-After all that work building SSL from scratch, turns out having 2 million training samples matters. Who knew.
+Even though I knew I probably wouldn't make a dent against the pretrained model, I had to try it.
 
 ---
 
