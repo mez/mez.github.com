@@ -39,7 +39,7 @@ scheduler = OneCycleLR
 
 ### Test-Time Augmentation
 
-I noticed validation performance was inconsistent, so I added TTA—averaging predictions across multiple augmented versions of each test sample.
+I noticed validation performance was inconsistent, so I added TTA, averaging predictions across multiple augmented versions of each test sample.
 
 ```python
 def predict_with_tta(model, spectrogram, n_augments=5):
@@ -84,15 +84,29 @@ Audio → Mel Spectrogram → ResNet Encoder → Projection Head → Contrastive
 
 **Result: 82.5% accuracy**
 
-But here's the catch—the contrastive task itself achieved 98% accuracy during pretraining. The model was solving a nearly trivial task because environmental sounds are so acoustically distinct that even simple augmentations couldn't fool it.
+But here's the catch: the contrastive task itself reached **98% accuracy during pretraining**.
 
-**Lesson:** Contrastive learning needs *hard negatives*. With ESC-50's diverse categories, the model didn't need to learn subtle features.
+The model was solving a nearly trivial task.
+
+Environmental sounds in ESC-50 are already highly separable in the spectral domain (dog bark vs chainsaw vs rain, etc.). With relatively mild augmentations, the identity of each sound barely changes. That means the encoder can solve the contrastive objective using coarse cues (energy bands, temporal envelope) instead of learning robust, invariant representations.
+
+In other words, the model learned:
+
+*"these sounds are different"*
+
+instead of:
+
+*"these two transformed versions of the same sound are meaningfully the same"*
+
+**Lesson:** Contrastive learning only works when the task is hard enough. You need augmentations and negatives that force the model to learn invariances, not shortcuts.
+
+Even with this limitation, the learned representation still reached 82.5% accuracy, which is competitive with standard supervised CNN baselines on ESC-50.
 
 ### Masked Prediction (BEATs-style)
 
 Inspired by BERT and BEATs: hide patches of the spectrogram and predict discrete tokens.
 
-> **Note:** This was a simplified, educational implementation to understand the BEATs framework—not a full reproduction. The real BEATs includes iterative tokenizer refinement, larger models (90M+ params), and training on millions of samples. My goal was to grasp the core concepts: patch embeddings, masking, and discrete token prediction.
+> **Note:** This was a simplified, educational implementation to understand the BEATs framework, not a full reproduction. The real BEATs includes iterative tokenizer refinement, larger models (90M+ params), and training on millions of samples. My goal was to grasp the core concepts: patch embeddings, masking, and discrete token prediction.
 
 ```
 Spectrogram → Patch Embedding → Encoder → Predict Masked Tokens
@@ -154,7 +168,7 @@ param_groups = [
 
 **Result: 95.25% accuracy** 🎯
 
-The frozen approach gets you 94.5% with minimal compute—the AudioSet pretraining is *that* good. Fine-tuning squeezes out another 0.75%, which matters if you're chasing leaderboards but honestly? Frozen is probably fine for most use cases.
+The frozen approach gets you 94.5% with minimal compute. The AudioSet pretraining is *that* good. Fine-tuning squeezes out another 0.75%, which matters if you're chasing leaderboards but honestly? Frozen is probably fine for most use cases.
 
 Even though I knew I probably wouldn't make a dent against the pretrained model, I had to try it.
 
@@ -230,6 +244,8 @@ The gap between my from-scratch SSL attempts and the pretrained BEATs tells the 
 - **Transformers are data-hungry.** CNNs win on small datasets.
 - **TTA is free accuracy.** 3% boost for minimal effort.
 
-This is why I love jumping between domains—contrastive learning from NLP, masked prediction from BERT, spectrogram tricks from signal processing. The dots connect in unexpected ways.
+This is why I love jumping between domains: contrastive learning from NLP, masked prediction from BERT, spectrogram tricks from signal processing. The dots connect in unexpected ways.
 
-The real takeaway? Building these from scratch taught me more than any tutorial ever could. Sometimes you have to reinvent the wheel to understand why it's round.
+The real takeaway? Running these experiments taught me more than any tutorial ever could. Sometimes you have to build the thing yourself to understand why it works, and why it doesn't.
+
+What surprised me most is that self-supervised learning doesn't automatically produce meaningful representations. It will happily learn shortcuts if the task allows it. Designing the right objective turns out to matter just as much as the model itself.
