@@ -5,7 +5,7 @@ description: "A weekend experiment exploring CNNs, Transformers, and SSL techniq
 tags: [Deep Learning, Audio, Self-Supervised Learning]
 ---
 
-I went down an audio classification rabbit hole. What started as "how hard can ESC-50 be?" turned into a weekend of building CNNs, Transformers, and finally understanding why everyone keeps talking about self-supervised learning.
+I went down an audio classification rabbit hole. What started as "how hard can ESC-50 be?" turned into a weekend of building CNNs, Transformers, and finally catching up on self-supervised learning, only a few years behind everyone else.
 
 This post documents everything I tried, what worked, what didn't, and the lessons learned.
 
@@ -147,6 +147,11 @@ I tried a full Transformer encoder instead of CNN.
 This was humbling. Transformers need *massive* amounts of data. With only 1,600 training samples, it couldn't learn meaningful patterns. CNNs have stronger inductive biases that help with limited data.
 
 ---
+
+<div style="max-width: 400px; margin: 2rem auto;">
+  <div class="tenor-gif-embed" data-postid="13987821127347517247" data-share-method="host" data-aspect-ratio="1.74074" data-width="100%"><a href="https://tenor.com/view/call-an-ambulance-but-not-for-me-but-not-for-me-call-an-ambulance-gif-13987821127347517247">Call An Ambulance But Not For Me GIF</a>from <a href="https://tenor.com/search/call+an+ambulance+but+not+for+me-gifs">Call An Ambulance But Not For Me GIFs</a></div>
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+</div>
 
 ## The BEATs Revelation
 
