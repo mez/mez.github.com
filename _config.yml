@@ -1,5 +1,7 @@
 title:        Mez Gebre
 email:        mez@jetcode.io
+description:  "A scratchpad for projects and ideas from an engineer who loves connecting dots across domains."
+author:       Mez Gebre
 markdown:     kramdown
 permalink:    pretty
 highlighter:  rouge
@@ -11,4 +13,14 @@ disqus_shortname: 'mez-github-io'
 url: https://mez.github.io
 image_base: /public/img
 date_format: '%B %d, %Y'
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-sitemap, jekyll-seo-tag]
+
+# SEO settings
+twitter:
+  username: mez_gebre
+  card: summary_large_image
+social:
+  name: Mez Gebre
+  links:
+    - https://twitter.com/mez_gebre
+    - https://github.com/mez
