@@ -159,7 +159,7 @@ After all my experiments, I tried Microsoft's BEATs model, pretrained on AudioSe
 
 I tested two approaches:
 
-**Frozen encoder:** Only train a new classifier head on top.
+**Frozen encoder:** Only train a new classifier head on top.<br>
 **Result: 94.50% accuracy**
 
 **Fine-tuned with differential learning rates:**
